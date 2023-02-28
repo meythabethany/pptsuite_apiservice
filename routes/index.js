@@ -15,12 +15,4 @@ router.get('/testconnect', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-
-router.get("/pickingList", function (req, res, next) {
-  sql.pickingList().then((result) => {
-    res.json(result[0]);
-  });
-});
-
-
 module.exports = router;

@@ -9,20 +9,7 @@ async function getdata() {
 console.log(" mathus-error :" + error);
   }
 }
- 
-
-async function pickingList() {
-    try {
-      let pool = await sql.connect(config);
-      let res = await pool.request().query("SELECT *  FROM PickHeaderTestApi");
-      return res.recordsets;
-    } catch (error) {
-      console.log(" mathus-error :" + error);
-    }
-  }
-  
 
 module.exports = {
-  getdata: getdata,
-  pickingList:pickingList
+  getdata: getdata
 };
